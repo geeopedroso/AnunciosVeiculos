@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Anuncios.Anuncio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row">
+    <div class="col">
+        <h3 class="display-4">Anuncios</h3>
+    </div>
+</div>
+<div class="row mt-4 mb-4">
+    <div class="col">
+        <a class="btn btn-primary" asp-area="Painel" asp-action="Create"><i class="fas fa-plus-circle"></i> Criar novo anúncio</a>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+
+            <thead>
+                <tr>
+                  
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Cor</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Valor da Compra</th>
+                    <th scope="col">Valor da Venda</th>
+                    <th scope="col">Data da Venda</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    Console.WriteLine(item.ValorCompra);
+                <tr>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdModeloNavigation.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdModeloNavigation.Ano)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdModeloNavigation.Ano)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorCompra)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorVenda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataVenda)
+                    </td>
+
+                    <td>
+
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.IdAnuncio">Detalhes</a>
+                        <a class="btn btn-secondary btn-sm" asp-action="Edit" asp-route-id="@item.IdAnuncio">Editar</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.IdAnuncio">Excluir</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
