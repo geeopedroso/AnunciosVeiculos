@@ -1,0 +1,10 @@
+# AnunciosVeiculos
+
+Sistema web em C# Asp.Net core com SQLServer
+
+## Instruções 
+
+Crie o banco no SQLServer com o script disponivel no diretorio "banco"
+
+OBS: Sinstema incompleto
+
