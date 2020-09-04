@@ -6,5 +6,5 @@ Sistema web em C# Asp.Net core com SQLServer
 
 Crie o banco no SQLServer com o script disponivel no diretorio "banco"
 
-OBS: Sinstema incompleto
+Obs: Sistema incompleto
 
