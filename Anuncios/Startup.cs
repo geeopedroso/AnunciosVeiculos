@@ -39,6 +39,7 @@ namespace Anuncios
             }
             app.UseStaticFiles();
 
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -47,7 +48,7 @@ namespace Anuncios
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Anuncios}/{action=Index}/{id?}");
             });
         }
     }

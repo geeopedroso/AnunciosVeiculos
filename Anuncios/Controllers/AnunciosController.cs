@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Anuncios;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Anuncios.Controllers
 {
-    public class AnunciosController : Controller
+       public class AnunciosController : Controller
     {
         private readonly AnunciosContext _context;
 
@@ -40,7 +38,7 @@ namespace Anuncios.Controllers
             {
                 return NotFound();
             }
-
+            var a = 1;
             return View(anuncio);
         }
 
